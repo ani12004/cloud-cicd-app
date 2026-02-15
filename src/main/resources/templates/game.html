@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Guess The Number</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+
+<div class="container">
+    <h1>🎯 Guess The Number</h1>
+
+    <p th:text="${message}"></p>
+
+    <form action="/guess" method="post">
+        <input type="number" name="guess" min="1" max="100" required>
+        <button type="submit">Guess</button>
+    </form>
+
+    <a href="/">🔄 Restart Game</a>
+</div>
+
+</body>
+</html>
